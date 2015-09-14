@@ -12,7 +12,7 @@ $().ready(function() {
     $("#new-landmarks").append('<div class="new-landmark">' +
                             '<div class="form-group">' +
                               '<label for="new-landmark">Landmark</label>' +
-                              '<input type="text" class="form-control new-markland">' +
+                              '<input type="text" class="form-control new-markland  ">' +
                               '</div>' +
                             '</div>');
   });
