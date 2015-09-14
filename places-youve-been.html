@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <script src="js/jquery-1.11.3.js"></script>
+    <script src="js/scripts.js"></script>
+    <title>Places You've Been</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Places</h1>
+      <div class="row">
+        <div class="col-md-6">
+          <form id="new-place">
+            <div class="form-group">
+              <label for="new-place-name">Place Name</label>
+              <input type="text" class="form-control" id="new-place-name">
+            </div>
+
+            <div id="new-notes">
+              <div class="new-note">
+                <div class="form-group">
+                  <label for="new-note">Note</label>
+                  <input type="text" class="form-control new-note">
+                </div>
+              </div>
+            </div>
+
+            <span class="btn btn-primary" id="add-note">Another Note</span>
+
+            <div id="new-landmarks">
+              <div class="new-landmark">
+                <div class="form-group">
+                  <label for="new-landmark">Landmark</label>
+                  <input type="text" class="form-control new-landmark">
+                </div>
+              </div>
+            </div>
+
+            <span class="btn btn-primary" id="add-landmark">Another Landmark</span>
+
+            <div id="new-dates">
+              <div class="new-date">
+                <div class="form-group">
+                  <label for="new-from-date">from</label>
+                  <input type="date" class="form-control new-from-date">
+                </div>
+                <div class="form-group">
+                  <label for="new-to-date">to</label>
+                  <input type="date" class="form-control new-to-date">
+                </div>
+              </div>
+            </div>
+
+            <span class="btn btn-primary" id="add-date">Another Date</span>
+
+            <button type="submit" class="btn btn-success">Add</button>
+          </form>
+
+          <h2>Places:</h2>
+          <ul id="places">
+          </ul>
+
+        </div>
+        <div class="col-md-6">
+          <div id="show-place">
+            <h2></h2>
+
+            <ul id="notes"></ul>
+            <ul id="landmarks"></ul>
+            <ul id="dates"></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
