@@ -3,7 +3,7 @@ $().ready(function() {
     $("#new-notes").append('<div class="new-note">' +
                             '<div class="form-group">' +
                               '<label for="new-note">Note</label>' +
-                              '<input type="text" class="form-control new-note">' +
+                              '<input type="text" class="form-control new-text">' +
                               '</div>' +
                             '</div>');
   });
@@ -12,7 +12,7 @@ $().ready(function() {
     $("#new-landmarks").append('<div class="new-landmark">' +
                             '<div class="form-group">' +
                               '<label for="new-landmark">Landmark</label>' +
-                              '<input type="text" class="form-control new-landmark">' +
+                              '<input type="text" class="form-control new-markland">' +
                               '</div>' +
                             '</div>');
   });
@@ -37,12 +37,13 @@ $().ready(function() {
     var newPlace = { placeName: inputtedPlaceName, notes: [], landmarks: [], dates: [] };
 
     $(".new-note").each(function() {
-      var inputtedNote = $(this).find("input.new-note").val();
+      var inputtedNote = $(this).find("input.new-text").val();
       newPlace.notes.push(inputtedNote);
+      debugger;
     });
 
     $(".new-landmark").each(function() {
-      var inputtedLandmark = $(this).find("input.new-landmark").val();
+      var inputtedLandmark = $(this).find("input.new-markland").val();
       newPlace.landmarks.push(inputtedLandmark);
     });
 
@@ -74,12 +75,11 @@ $().ready(function() {
         $("ul#dates").append("<li>" + "from: " + date.fromDate + " to: " +  date.toDate + "</li>");
       });
 
-      debugger;
     });
 
     $("input#new-place-name").val("");
-    $("input.new-landmark").val("");
-    $("input.new-note").val("");
+    $("input.new-markland").val("");
+    $("input.new-text").val("");
     $("input.new-from-date").val("");
     $("input.new-to-date").val("");
   });
